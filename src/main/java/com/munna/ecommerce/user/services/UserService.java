@@ -1,9 +1,12 @@
-package com.munna.ecommerce.user;
+package com.munna.ecommerce.user.services;
 
+import com.munna.ecommerce.user.modelsAndEntities.User;
+import com.munna.ecommerce.user.repositoryInterfaces.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class UserService {

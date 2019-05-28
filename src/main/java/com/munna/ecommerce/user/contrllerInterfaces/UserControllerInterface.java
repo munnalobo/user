@@ -1,5 +1,6 @@
-package com.munna.ecommerce.user;
+package com.munna.ecommerce.user.contrllerInterfaces;
 
+import com.munna.ecommerce.user.modelsAndEntities.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;

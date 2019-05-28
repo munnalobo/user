@@ -1,5 +1,6 @@
 package com.munna.ecommerce.user;
 
+import com.munna.ecommerce.user.modelsAndEntities.User;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration

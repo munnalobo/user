@@ -1,4 +1,4 @@
-package com.munna.ecommerce.user;
+package com.munna.ecommerce.user.modelsAndEntities;
 
 import lombok.*;
 

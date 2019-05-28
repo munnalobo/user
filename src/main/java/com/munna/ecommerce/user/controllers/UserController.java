@@ -1,5 +1,8 @@
-package com.munna.ecommerce.user;
+package com.munna.ecommerce.user.controllers;
 
+import com.munna.ecommerce.user.services.UserService;
+import com.munna.ecommerce.user.contrllerInterfaces.UserControllerInterface;
+import com.munna.ecommerce.user.modelsAndEntities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
-public class UserController implements UserControllerInterface{
+public class UserController implements UserControllerInterface {
     @Autowired
     UserService userService;
     @Override
