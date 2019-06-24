@@ -1,6 +1,7 @@
 package com.munna.ecommerce.user;
 
 import com.munna.ecommerce.user.modelsAndEntities.User;
+import com.munna.ecommerce.user.repositoryInterfaces.UserRepository;
 import com.munna.ecommerce.user.services.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -23,7 +24,7 @@ public class UserServiceTest {
     @Autowired
     private User user;
     @Mock
-    private  UserRepository userRepository;
+    private UserRepository userRepository;
 
     @InjectMocks
     private UserService userService;
@@ -31,12 +32,12 @@ public class UserServiceTest {
     // Arrange Act Assert
 
     @Test
-    public void setUser_shouldStoreNewuserInRepository(){
+    public void setUser_shouldStoreNewuserInRepository() {
 
         //Arrange
-        ArrayList<User> userList= new ArrayList<>();
+        ArrayList<User> userList = new ArrayList<>();
 
-        user=testBuilder.tetsUserBuilder();
+        user = TestBuilder.tetsUserBuilder().build();
         user.setId(1L);
         userList.add(user);
         user.setId(2L);
@@ -48,7 +49,7 @@ public class UserServiceTest {
         userService.setUser(user);
 
         //Assert
-        assertEquals(2,userService.getAllUsers().size());
+        assertEquals(2, userService.getAllUsers().size());
 
     }
 }

@@ -17,13 +17,21 @@ import javax.validation.constraints.NotNull;
 @Setter
 
 public class User {
-    @Id @GeneratedValue private Long id;
-    @NotNull private String firstName;
-    @NotNull private String lastName;
-    @NotNull @Email private String eMail;
-    @NotNull private String dateOfBirth;
+    @Id
+    @GeneratedValue
+    private Long id;
+    @NotNull
+    private String firstName;
+    @NotNull
+    private String lastName;
+    @NotNull
+    @Email
+    private String eMail;
+    private String dateOfBirth;
     private String gender;
-    @NotNull private String userName;
-    @NotNull private String password;
+    @NotNull
+    private String userName;
+    @NotNull
+    private String password;
 //    @NotNull private Roles role;
 }

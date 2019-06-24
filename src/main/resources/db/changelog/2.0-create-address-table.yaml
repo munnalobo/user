@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2.0-create-address-table
+      author: munna
+      changes:
+        - createTable:
+            tableName: address
+            columns:
+              - column:
+                  name: id_address
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    - primaryKeyName: address_id_pk
+                    - primaryKey: true
+                    - nullable: false
+              - column:
+                  name: address_line_1
+                  type: varchar(45)
+              - column:
+                  name: address_line_2
+                  type: varchar(45)
+              - column:
+                  name: city
+                  type: varchar(100)
+              - column:
+                  name: state
+                  type: varchar(45)
+              - column:
+                  name: zip
+                  type: varchar(100)
+              - column:
+                  name: country
+                  type: varchar(45)
