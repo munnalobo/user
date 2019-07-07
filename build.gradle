@@ -21,6 +21,12 @@ group = 'com.ecommerce.munna'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
+jar {
+    baseName = 'user'
+    version = '0.1.0'
+    enabled = true
+}
+
 repositories {
     mavenCentral()
 }
@@ -49,6 +55,11 @@ dependencies {
     testCompile('org.junit.jupiter:junit-jupiter-params:5.3.2')
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.3.2')
     testCompile('org.mockito:mockito-junit-jupiter:2.+')
+
+/*    your jar doesnt know whats lombok is there when building with terminal commands----
+    this is not necessary when you build with intellij plugin cause you download plugin and put annotate processing.*/
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
 }
 test {
     useJUnitPlatform()
